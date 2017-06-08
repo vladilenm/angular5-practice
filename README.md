@@ -1,1 +1,1 @@
-# ng2p-d
+# NG2 Practice Design
