@@ -2859,3 +2859,11 @@ pre {
   @media (max-width: 767px) {
     .header .header-block-nav .profile-dropdown-menu {
       margin-top: 8px; } }
+.form-group.has-error .form-help-text {color: #FB494D;
+  font-size: 13px;
+}
+
+.form-group.has-success .form-help-text {
+  color: #8CDE33;
+  font-size: 13px;
+}
