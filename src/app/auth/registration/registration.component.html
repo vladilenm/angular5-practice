@@ -1,3 +1,49 @@
-<p>
-  registration works!
-</p>
+<p class="text-xs-center">Регистрация для получения доступа</p>
+<form>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      class="form-control underlined"
+      id="email"
+      placeholder="Введите email"
+    >
+  </div>
+  <div class="form-group has-error">
+    <label for="password">Пароль</label>
+    <input
+      type="password"
+      class="form-control underlined"
+      id="password"
+      placeholder="Введите пароль"
+    >
+    <span class="form-help-text">Error message.</span>
+  </div>
+  <div class="form-group has-success">
+    <label for="name">Имя</label>
+    <input
+      type="text"
+      class="form-control underlined"
+      id="name"
+      placeholder="Введите имя"
+    >
+    <span class="form-help-text">Success message.</span>
+  </div>
+  <div class="form-group">
+    <label for="agree">
+      <input class="checkbox" id="agree" type="checkbox">
+      <span>Согласен с правилами</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-block btn-primary">Зарегистрироваться</button>
+  </div>
+  <div class="form-group">
+    <p class="text-muted text-xs-center">
+      Уже есть аккаунт?
+      <a [routerLink]="'/login'">
+        Войти!
+      </a>
+    </p>
+  </div>
+</form>

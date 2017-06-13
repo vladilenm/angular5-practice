@@ -20,8 +20,8 @@
       "prefix": "wfm",
       "styles": [
         "styles.scss",
-        "assets/theme.css",
-        "assets/vendor.css"
+        "assets/vendor.css",
+        "assets/theme.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
