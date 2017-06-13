@@ -9,6 +9,8 @@ import { SystemModule } from './system/system.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { AuthGuard } from './shared/services/auth.guard';
+import { AuthService } from './shared/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
     SystemModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
