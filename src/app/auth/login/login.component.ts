@@ -35,8 +35,8 @@ export class LoginComponent implements OnInit {
         if (user) {
           if (user.password === userData.password) {
             this.authService.login();
-            console.log('success');
-            // this.router.navigate('/bill');
+            window.localStorage.setItem('user', JSON.stringify(user));
+            this.router.navigate(['/bill']);
           } else {
             alert('Неверный пароль!');
           }
