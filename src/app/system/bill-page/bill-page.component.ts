@@ -30,6 +30,12 @@ export class BillPageComponent implements OnInit, OnDestroy {
     });
   }
 
+  onRefresh() {
+    this.billService.getCurrency().subscribe((currency) => {
+      this.currency = currency;
+    });
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

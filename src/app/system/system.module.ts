@@ -10,6 +10,10 @@ import { BillPageComponent } from './bill-page/bill-page.component';
 import { BillCardComponent } from './bill-page/bill-card/bill-card.component';
 import { CurrencyCardComponent } from './bill-page/currency-card/currency-card.component';
 import { BillService } from './shared/services/bill.service';
+import { HistoryPageComponent } from './history-page/history-page.component';
+import { PlanningPageComponent } from './planning-page/planning-page.component';
+import { RecordPageComponent } from './record-page/record-page.component';
+import { DropdownDirective } from './shared/directives/dropdown.directive';
 
 @NgModule({
   imports: [
@@ -23,7 +27,11 @@ import { BillService } from './shared/services/bill.service';
     SystemComponent,
     BillPageComponent,
     BillCardComponent,
-    CurrencyCardComponent
+    CurrencyCardComponent,
+    HistoryPageComponent,
+    PlanningPageComponent,
+    RecordPageComponent,
+    DropdownDirective
   ],
   providers: [BillService]
 })

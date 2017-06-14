@@ -1,0 +1,76 @@
+<div class="title-block">
+  <h3 class="title">
+    Страница записей <span class="sparkline bar"></span>
+  </h3>
+</div>
+
+<section class="section">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header bordered">
+          <div class="header-block">
+            <h3 class="title">Добавить событие</h3>
+          </div>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <label class="control-label" for="category">Выберите категорию</label>
+              <select class="form-control" id="category">
+                <option>Option one</option>
+                <option>Option two</option>
+                <option>Option three</option>
+                <option>Option four</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Выберите тип</label>
+              <div>
+                <label>
+                  <input class="radio" name="radios" type="radio">
+                  <span>Доход</span>
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input class="radio" name="radios" type="radio" checked>
+                  <span>Расход</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="amount">Введите сумму</label>
+              <input type="number" value="0" id="amount" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header bordered">
+          <div class="header-block">
+            <h3 class="title">Добавить категорию</h3>
+          </div>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group has-error">
+              <label class="control-label" for="category-name">Введите название</label>
+              <input type="text" id="category-name" class="form-control">
+              <span class="form-help-text">Валидация ошибка</span>
+            </div>
+            <div class="form-group has-success">
+              <label class="control-label" for="category-value">Введите лимит</label>
+              <input type="number" value="0" id="category-value" class="form-control">
+              <span class="form-help-text">Валидация нет ошибки</span>
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

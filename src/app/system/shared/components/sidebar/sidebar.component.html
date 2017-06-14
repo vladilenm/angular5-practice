@@ -14,17 +14,17 @@
     </div>
     <nav class="menu">
       <ul class="nav metismenu">
-        <li class="active">
-          <a href="#"> <i class="fa fa-building-o"></i> Счет </a>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/bill']"> <i class="fa fa-building-o"></i> Счет </a>
         </li>
-        <li>
-          <a href="#"> <i class="fa fa-flash"></i> История </a>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/history']"> <i class="fa fa-flash"></i> История </a>
         </li>
-        <li>
-          <a href="#"> <i class="fa fa-archive"></i> Планирование </a>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/planning']"> <i class="fa fa-archive"></i> Планирование </a>
         </li>
-        <li>
-          <a href="#"> <i class="fa fa-plus-square"></i> Запись </a>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/record']"> <i class="fa fa-plus-square"></i> Запись </a>
         </li>
       </ul>
     </nav>
