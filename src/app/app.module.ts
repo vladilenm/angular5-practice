@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -11,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { AuthGuard } from './shared/services/auth.guard';
 import { AuthService } from './shared/services/auth.service';
+import { UserService } from './shared/services/users.service';
 
 @NgModule({
   declarations: [
@@ -19,13 +19,12 @@ import { AuthService } from './shared/services/auth.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
     AuthModule,
     SystemModule,
     AppRoutingModule
   ],
-  providers: [AuthGuard, AuthService],
+  providers: [AuthGuard, AuthService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

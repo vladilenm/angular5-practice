@@ -1,49 +1,74 @@
 <p class="text-xs-center">Регистрация для получения доступа</p>
-<form>
-  <div class="form-group">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group" [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
     <label for="email">Email</label>
     <input
       type="text"
       class="form-control underlined"
       id="email"
+      formControlName="email"
       placeholder="Введите email"
     >
+    <span class="form-help-text" *ngIf="form.get('email').invalid && form.get('email').touched">
+      <span *ngIf="form.get('email').errors['required']">Email не должен быть пустым</span>
+      <span *ngIf="form.get('email').errors['email']">Введите корректный email</span>
+      <span *ngIf="form.get('email').errors['emailForbidden']">Email уже занят</span>
+    </span>
   </div>
-  <div class="form-group has-error">
+  <div class="form-group" [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}">
     <label for="password">Пароль</label>
     <input
       type="password"
       class="form-control underlined"
       id="password"
+      formControlName="password"
       placeholder="Введите пароль"
     >
-    <span class="form-help-text">Error message.</span>
+    <span class="form-help-text" *ngIf="form.get('password').invalid && form.get('password').touched">
+      <span *ngIf="form.get('password').errors['required']">Пароль не должен быть пустым</span>
+      <span *ngIf="form.get('password').errors['minlength']['requiredLength']">
+        Пароль должен быть больше {{form.get('password').errors['minlength']['requiredLength']}} символов.
+        Сейчас {{form.get('password').errors['minlength']['actualLength']}}
+      </span>
+    </span>
   </div>
-  <div class="form-group has-success">
+  <div class="form-group" [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}">
     <label for="name">Имя</label>
     <input
       type="text"
       class="form-control underlined"
       id="name"
+      formControlName="name"
       placeholder="Введите имя"
     >
-    <span class="form-help-text">Success message.</span>
+    <span class="form-help-text" *ngIf="form.get('name').invalid && form.get('name').touched">
+      <span *ngIf="form.get('name').errors['required']">Имя не должно быть пустым</span>
+    </span>
   </div>
   <div class="form-group">
     <label for="agree">
-      <input class="checkbox" id="agree" type="checkbox">
+      <input
+        class="checkbox"
+        id="agree"
+        type="checkbox"
+        formControlName="agree"
+      >
       <span>Согласен с правилами</span>
     </label>
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-block btn-primary">Зарегистрироваться</button>
-  </div>
-  <div class="form-group">
-    <p class="text-muted text-xs-center">
-      Уже есть аккаунт?
-      <a [routerLink]="'/login'">
-        Войти!
-      </a>
-    </p>
+    <button
+      type="submit"
+      class="btn btn-block btn-primary"
+      [disabled]="form.invalid"
+    >Зарегистрироваться</button>
   </div>
 </form>
+<div class="form-group">
+  <p class="text-muted text-xs-center">
+    Уже есть аккаунт?
+    <a [routerLink]="'/login'">
+      Войти!
+    </a>
+  </p>
+</div>
