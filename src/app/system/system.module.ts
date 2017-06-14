@@ -7,7 +7,9 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { SystemRoutingModule } from './system-routing.module';
 import { SystemComponent } from './system.component';
 import { BillPageComponent } from './bill-page/bill-page.component';
-
+import { BillCardComponent } from './bill-page/bill-card/bill-card.component';
+import { CurrencyCardComponent } from './bill-page/currency-card/currency-card.component';
+import { BillService } from './shared/services/bill.service';
 
 @NgModule({
   imports: [
@@ -19,8 +21,11 @@ import { BillPageComponent } from './bill-page/bill-page.component';
     HeaderComponent,
     SidebarComponent,
     SystemComponent,
-    BillPageComponent
-  ]
+    BillPageComponent,
+    BillCardComponent,
+    CurrencyCardComponent
+  ],
+  providers: [BillService]
 })
 export class SystemModule {
 }

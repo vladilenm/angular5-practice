@@ -5,18 +5,10 @@
       "email": "wfm@mail.ru",
       "password": "12345678",
       "name": "Администратор"
-    },
-    {
-      "email": "mininvlad@gmail.com",
-      "password": "1234567",
-      "name": "Минин Владилен",
-      "id": 2
-    },
-    {
-      "email": "minin1vlad@gmail.com",
-      "password": "12345678",
-      "name": "Минин Владилен",
-      "id": 3
     }
-  ]
+  ],
+  "bill": {
+    "value": 100000,
+    "currency": "RUB"
+  }
 }

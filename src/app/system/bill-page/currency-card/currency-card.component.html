@@ -1,0 +1,32 @@
+<div class="col col-xs-12 col-sm-12 col-md-6 col-xl-7 history-col">
+  <div class="card">
+    <div class="card-block">
+      <div class="title-block">
+        <h4 class="title">Курс</h4>
+      </div>
+      <div class="row row-sm stats-container">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th>Валюта</th>
+            <th>Курс</th>
+            <th>Дата</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>RUB</td>
+            <td>1</td>
+            <td>{{currency.date}}</td>
+          </tr>
+          <tr *ngFor="let cur of currencies">
+            <td>{{cur}}</td>
+            <td>{{currency.rates[cur]}}</td>
+            <td>{{currency.date}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

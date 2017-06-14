@@ -9,6 +9,7 @@ export class AuthService {
   }
 
   logout() {
+    window.localStorage.clear();
     this.isAuthenticated = false;
   }
 

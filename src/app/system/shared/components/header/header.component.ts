@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { User } from '../../../../shared/models/user.model';
 
 @Component({
@@ -6,13 +6,23 @@ import { User } from '../../../../shared/models/user.model';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   user: User;
+  now: Date = new Date();
+  interval;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('user'));
+    this.interval = window.setInterval(() => {
+      this.now = new Date();
+    }, 1000);
+  }
+
+  ngOnDestroy() {
+    window.clearInterval(this.interval);
   }
 
 }

@@ -1,3 +1,14 @@
-<p>
-  bill-page works!
-</p>
+<div class="title-block">
+  <h3 class="title">
+    Страница счета <span class="sparkline bar"></span>
+  </h3>
+</div>
+<section class="section">
+  <div class="row" *ngIf="isLoaded">
+    <wfm-bill-card [bill]="bill" [currency]="currency"></wfm-bill-card>
+    <wfm-currency-card [currency]="currency"></wfm-currency-card>
+  </div>
+  <div class="row" *ngIf="!isLoaded">
+    Loading ....
+  </div>
+</section>
