@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header bordered">
+    <div class="header-block">
+      <h3 class="title">Добавить событие</h3>
+    </div>
+  </div>
+  <div class="card-block">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label class="control-label" for="category">Выберите категорию</label>
+        <select
+          class="form-control"
+          id="category"
+          [ngModel]="1"
+          name="category"
+          required
+        >
+          <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Выберите тип</label>
+        <div *ngFor="let t of types">
+          <label>
+            <input
+              class="radio"
+              [ngModel]="'outcome'"
+              required
+              name="type"
+              type="radio"
+              [value]="t.value"
+            >
+            <span>{{t.label}}</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="amount">Введите сумму</label>
+        <input
+          type="number"
+          id="amount"
+          class="form-control"
+          [ngModel]="1"
+          min="1"
+          name="amount"
+          required
+        >
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="f.invalid"
+      >Добавить</button>
+    </form>
+  </div>
+</div>

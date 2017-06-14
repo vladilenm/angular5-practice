@@ -10,5 +10,38 @@
   "bill": {
     "value": 100000,
     "currency": "RUB"
-  }
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Дом",
+      "capacity": 2222
+    },
+    {
+      "id": 2,
+      "name": "Еда",
+      "capacity": 2222
+    },
+    {
+      "id": 3,
+      "name": "Машина",
+      "capacity": 2222
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 4444,
+      "category": 2,
+      "date": "12.12.2017 19:49:02"
+    },
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 3333,
+      "category": 1,
+      "date": "12.12.2017 19:49:02"
+    }
+  ]
 }

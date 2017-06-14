@@ -14,6 +14,10 @@ import { HistoryPageComponent } from './history-page/history-page.component';
 import { PlanningPageComponent } from './planning-page/planning-page.component';
 import { RecordPageComponent } from './record-page/record-page.component';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { CategoriesService } from './shared/services/categories.service';
+import { AddEventComponent } from './record-page/add-event/add-event.component';
+import { AddCategoryComponent } from './record-page/add-category/add-category.component';
+import { EventsService } from './shared/services/events.serrvice';
 
 @NgModule({
   imports: [
@@ -31,9 +35,11 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     HistoryPageComponent,
     PlanningPageComponent,
     RecordPageComponent,
-    DropdownDirective
+    DropdownDirective,
+    AddEventComponent,
+    AddCategoryComponent
   ],
-  providers: [BillService]
+  providers: [BillService, CategoriesService, EventsService]
 })
 export class SystemModule {
 }
