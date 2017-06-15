@@ -41,7 +41,7 @@ export class PlanningPageComponent implements OnInit {
 
   setCostsToCategories() {
     this.categories.forEach((cat) => {
-      const catEvents = this.events.filter(e => e.category === cat.id);
+      const catEvents = this.events.filter(e => e.category === cat.id && e.type === 'outcome');
       cat.costs = catEvents.reduce((total, event) => {
         total += event.amount;
         return total;

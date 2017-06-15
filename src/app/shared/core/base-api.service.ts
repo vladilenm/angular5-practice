@@ -4,7 +4,8 @@ import { Observable } from 'rxjs/Observable';
 export class BaseApi {
   private baseUrl = 'http://localhost:3000/';
 
-  constructor(public http: Http) {}
+  constructor(public http: Http) {
+  }
 
   public getUrl(addition: string): string {
     return this.baseUrl + addition;
@@ -17,6 +18,11 @@ export class BaseApi {
 
   public post(addition: string, data: any = {}): Observable<any> {
     return this.http.post(this.getUrl(addition), data)
+      .map((response: Response) => response.json());
+  }
+
+  public put(addition: string, data: any = {}): Observable<any> {
+    return this.http.put(this.getUrl(addition), data)
       .map((response: Response) => response.json());
   }
 }

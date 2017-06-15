@@ -5,6 +5,7 @@
     </div>
   </div>
   <div class="card-block">
+    <div class="alert alert-danger" *ngIf="billError">{{billError}}</div>
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div class="form-group">
         <label class="control-label" for="category">Выберите категорию</label>

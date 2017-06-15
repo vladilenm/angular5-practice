@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 9078,
     "currency": "RUB"
   },
   "categories": [
@@ -26,36 +26,6 @@
       "id": 3,
       "name": "Машина",
       "capacity": 2222
-    },
-    {
-      "name": "о",
-      "capacity": 1,
-      "id": 4
-    },
-    {
-      "name": "Влад",
-      "capacity": 12,
-      "id": 5
-    },
-    {
-      "name": "1",
-      "capacity": 4,
-      "id": 6
-    },
-    {
-      "name": "уууу",
-      "capacity": 1,
-      "id": 7
-    },
-    {
-      "name": "4а",
-      "capacity": 1,
-      "id": 8
-    },
-    {
-      "name": "12121212121",
-      "capacity": 1,
-      "id": 9
     }
   ],
   "events": [
@@ -74,18 +44,32 @@
       "date": "12.12.2017 19:49:02"
     },
     {
-      "type": "outcome",
-      "amount": 13232,
-      "category": 3,
-      "date": "15.06.2017 12:20:58",
+      "type": "income",
+      "amount": 1000,
+      "category": 2,
+      "date": "15.06.2017 14:00:48",
       "id": 3
     },
     {
-      "type": "income",
-      "amount": 12222,
-      "category": 5,
-      "date": "15.06.2017 12:46:29",
+      "type": "outcome",
+      "amount": 1500,
+      "category": 2,
+      "date": "15.06.2017 14:00:58",
       "id": 4
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "category": 3,
+      "date": "15.06.2017 14:01:58",
+      "id": 5
+    },
+    {
+      "type": "outcome",
+      "amount": 122,
+      "category": 1,
+      "date": "15.06.2017 14:06:59",
+      "id": 6
     }
   ]
 }

@@ -14,6 +14,7 @@ import { UserService } from '../../shared/services/users.service';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  authError: string;
 
   constructor(private authService: AuthService,
               private router: Router,
@@ -34,14 +35,15 @@ export class LoginComponent implements OnInit {
       .subscribe((user: User) => {
         if (user) {
           if (user.password === userData.password) {
+            this.authError = '';
             this.authService.login();
             window.localStorage.setItem('user', JSON.stringify(user));
             this.router.navigate(['/bill']);
           } else {
-            alert('Неверный пароль!');
+            this.authError = 'Неверный пароль!';
           }
         } else {
-          alert('Такого пользователя нет!');
+          this.authError = 'Такого пользователя нет!';
         }
       });
   }
