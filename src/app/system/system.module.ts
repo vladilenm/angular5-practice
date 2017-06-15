@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from '../shared/shared.module';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
@@ -19,12 +21,18 @@ import { AddEventComponent } from './record-page/add-event/add-event.component';
 import { AddCategoryComponent } from './record-page/add-category/add-category.component';
 import { EventsService } from './shared/services/events.serrvice';
 import { MomentPipe } from './shared/pipes/moment.pipe';
+import { HistoryChartComponent } from './history-page/history-chart/history-chart.component';
+import { HistoryEventsComponent } from './history-page/history-events/history-events.component';
+import { EventDetailsComponent } from './history-page/event-details/event-details.component';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
-    SystemRoutingModule
+    SystemRoutingModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
   ],
   declarations: [
     HeaderComponent,
@@ -39,7 +47,11 @@ import { MomentPipe } from './shared/pipes/moment.pipe';
     DropdownDirective,
     AddEventComponent,
     AddCategoryComponent,
-    MomentPipe
+    MomentPipe,
+    HistoryChartComponent,
+    HistoryEventsComponent,
+    EventDetailsComponent,
+    FilterPipe
   ],
   providers: [BillService, CategoriesService, EventsService]
 })

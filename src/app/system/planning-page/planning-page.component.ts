@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 import { CategoriesService } from '../shared/services/categories.service';
 import { BillService } from '../shared/services/bill.service';
 import { EventsService } from '../shared/services/events.serrvice';
 import { Bill } from '../shared/models/bill.model';
 import { Category } from '../shared/models/categiry.model';
-import { Observable } from 'rxjs/Observable';
 import { Event } from '../shared/models/event.model';
 
 @Component({
