@@ -1,3 +1,40 @@
-<p>
-  event-details works!
-</p>
+<div *ngIf="!isLoaded">Loading ....</div>
+<div *ngIf="isLoaded">
+  <div class="title-block">
+    <h3 class="title">
+      <a [routerLink]="['/history']"><i class="fa fa-arrow-left"></i></a>
+      Страница записи № {{event.id}}
+      <span class="sparkline bar"></span>
+    </h3>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <div
+          class="card card-success"
+          [ngClass]="{
+          'card-success': event.type === 'income',
+          'card-danger': event.type === 'outcome'
+        }"
+        >
+          <div class="card-header">
+            <div class="header-block">
+              <p class="title">
+                <span *ngIf="event.type === 'income'">Доход</span>
+                <span *ngIf="event.type === 'outcome'">Расход</span>
+              </p>
+            </div>
+          </div>
+          <div class="card-block">
+            <ul>
+              <li>Сумма: <strong>{{event.amount | number:'1.2'}} P</strong></li>
+              <li>Категория: <strong>{{category.name}}</strong></li>
+            </ul>
+          </div>
+          <div class="card-footer">{{event.date | wfmMoment:'DD.MM.YYYY HH:mm:ss':'DD.MM.YYYY'}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
