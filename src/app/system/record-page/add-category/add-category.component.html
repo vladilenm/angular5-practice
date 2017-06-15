@@ -6,18 +6,20 @@
   </div>
   <div class="card-block">
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': name.touched && name.invalid}">
         <label class="control-label" for="category-name">Введите название</label>
         <input
           type="text"
           id="category-name"
           class="form-control"
           required
-          name="catname"
+          name="name"
           ngModel
+          #name="ngModel"
         >
+        <span class="form-help-text" *ngIf="name.touched && name.invalid">Название не может быть пустым</span>
       </div>
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': capacity.touched && capacity.invalid}">
         <label class="control-label" for="capacity">Введите лимит</label>
         <input
           type="number"
@@ -27,7 +29,9 @@
           class="form-control"
           required
           [ngModel]="1"
+          #capacity="ngModel"
         >
+        <span class="form-help-text" *ngIf="capacity.touched && capacity.invalid">Лимит не может быть отрицательным</span>
       </div>
       <button
         type="submit"

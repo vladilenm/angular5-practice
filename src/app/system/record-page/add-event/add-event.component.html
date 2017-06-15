@@ -34,7 +34,7 @@
           </label>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': amount.invalid && amount.touched}">
         <label class="control-label" for="amount">Введите сумму</label>
         <input
           type="number"
@@ -44,7 +44,9 @@
           min="1"
           name="amount"
           required
+          #amount="ngModel"
         >
+        <span class="form-help-text" *ngIf="amount.invalid && amount.touched">Сумма должна быть больше 0</span>
       </div>
       <button
         type="submit"

@@ -23,7 +23,7 @@ export class AddEventComponent {
 
   onSubmit(form: NgForm) {
     const {category, type, amount} = form.value;
-    const event = new Event(type, amount, category, moment().format('DD.MM.YYYY HH:mm:ss'));
+    const event = new Event(type, amount, +category, moment().format('DD.MM.YYYY HH:mm:ss'));
     this.eventsService.addEvent(event)
       .subscribe(() => {
         form.setValue({category: 1, type: 'outcome', amount: 1});

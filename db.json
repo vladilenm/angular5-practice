@@ -26,6 +26,36 @@
       "id": 3,
       "name": "Машина",
       "capacity": 2222
+    },
+    {
+      "name": "о",
+      "capacity": 1,
+      "id": 4
+    },
+    {
+      "name": "Влад",
+      "capacity": 12,
+      "id": 5
+    },
+    {
+      "name": "1",
+      "capacity": 4,
+      "id": 6
+    },
+    {
+      "name": "уууу",
+      "capacity": 1,
+      "id": 7
+    },
+    {
+      "name": "4а",
+      "capacity": 1,
+      "id": 8
+    },
+    {
+      "name": "12121212121",
+      "capacity": 1,
+      "id": 9
     }
   ],
   "events": [
@@ -42,6 +72,20 @@
       "amount": 3333,
       "category": 1,
       "date": "12.12.2017 19:49:02"
+    },
+    {
+      "type": "outcome",
+      "amount": 13232,
+      "category": 3,
+      "date": "15.06.2017 12:20:58",
+      "id": 3
+    },
+    {
+      "type": "income",
+      "amount": 12222,
+      "category": 5,
+      "date": "15.06.2017 12:46:29",
+      "id": 4
     }
   ]
 }

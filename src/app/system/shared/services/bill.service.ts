@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+
 import { Bill } from '../models/bill.model';
 import { BaseApi } from '../../../shared/core/base-api.service';
 

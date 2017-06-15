@@ -12,7 +12,8 @@ export class RecordPageComponent implements OnInit {
   categories: Category[] = [];
   isLoaded = false;
 
-  constructor(private categoriesService: CategoriesService) { }
+  constructor(private categoriesService: CategoriesService) {
+  }
 
   ngOnInit() {
     this.categoriesService.getCategories()
@@ -20,6 +21,10 @@ export class RecordPageComponent implements OnInit {
         this.categories = categories;
         this.isLoaded = true;
       });
+  }
+
+  newCategoryAdded(category: Category) {
+    this.categories.push(category);
   }
 
 }
