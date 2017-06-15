@@ -9,7 +9,7 @@ import { RecordPageComponent } from './record-page/record-page.component';
 import { EventDetailsComponent } from './history-page/event-details/event-details.component';
 
 const routes: Routes = [
-  {path: '', component: SystemComponent, children: [
+  {path: 'system', component: SystemComponent, children: [
     {path: 'bill', component: BillPageComponent},
     {path: 'history', component: HistoryPageComponent},
     {path: 'planning', component: PlanningPageComponent},
