@@ -2918,3 +2918,7 @@ pre {
 .text-center {
   text-align: center;
 }
+
+a {
+  cursor: pointer;
+}

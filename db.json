@@ -5,95 +5,64 @@
       "email": "wfm@mail.ru",
       "password": "12345678",
       "name": "Администратор"
-    },
-    {
-      "email": "mininvlad@gmail.com",
-      "password": "12345678",
-      "name": "Минин Владилен",
-      "id": 2
-    },
-    {
-      "email": "minin2vlad@gmail.com",
-      "password": "2222222222",
-      "name": "Минин Владилен",
-      "id": 3
     }
   ],
   "bill": {
-    "value": 8933,
+    "value": 94000,
     "currency": "RUB"
   },
   "categories": [
     {
       "id": 1,
       "name": "Дом",
-      "capacity": 2222
+      "capacity": 15000
     },
     {
       "id": 2,
       "name": "Еда",
-      "capacity": 2222
+      "capacity": 10000
     },
     {
       "id": 3,
       "name": "Машина",
-      "capacity": 2222
-    },
-    {
-      "name": "Новая",
-      "capacity": 1222,
-      "id": 4
+      "capacity": 7000
     }
   ],
   "events": [
     {
       "id": 1,
       "type": "income",
-      "amount": 4444,
+      "amount": 1250,
       "category": 2,
       "date": "12.12.2017 19:49:02"
     },
     {
       "id": 2,
       "type": "outcome",
-      "amount": 3333,
+      "amount": 1300,
       "category": 1,
       "date": "12.12.2017 19:49:02"
     },
     {
       "type": "income",
-      "amount": 1000,
+      "amount": 1480,
       "category": 2,
       "date": "15.06.2017 14:00:48",
       "id": 3
     },
     {
       "type": "outcome",
-      "amount": 1500,
+      "amount": 2470,
       "category": 2,
       "date": "15.06.2017 14:00:58",
       "id": 4
     },
     {
       "type": "outcome",
-      "amount": 300,
+      "amount": 4000,
       "category": 3,
       "date": "15.06.2017 14:01:58",
       "id": 5
-    },
-    {
-      "type": "outcome",
-      "amount": 122,
-      "category": 1,
-      "date": "15.06.2017 14:06:59",
-      "id": 6
-    },
-    {
-      "type": "outcome",
-      "amount": 145,
-      "category": 4,
-      "date": "16.06.2017 12:48:06",
-      "id": 7
     }
   ]
 }

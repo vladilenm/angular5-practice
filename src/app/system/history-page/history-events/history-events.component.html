@@ -39,7 +39,7 @@
             <tr *ngFor="let event of events | wfmFilter:searchValue:searchField; let i = index">
               <th scope="row">{{i + 1}}</th>
               <td>{{event.amount | number:'1.2'}}</td>
-              <td>{{event.date}}</td>
+              <td>{{event.date | wfmMoment:'DD.MM.YYYY HH:mm:ss':'DD.MM.YYYY'}}</td>
               <td>{{getCategoryNameFromEvent(event)}}</td>
               <td>
                   <span [ngClass]="getTypeClass(event)">
