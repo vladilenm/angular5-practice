@@ -8,8 +8,48 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    @keyframes pace-spinner {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader-animator {
+      display: block;
+      animation: pace-spinner 400ms linear infinite;
+      border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.4);
+      border-image: none;
+      border-radius: 50%;
+      border-right: 2px solid rgba(0, 0, 0, 0) !important;
+      border-style: solid;
+      border-width: 2px;
+      height: 16px;
+      width: 16px;
+      margin: auto;
+      z-index: 2000;
+    }
+    #app-preload {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #app-preload > div {
+      height: 30px;
+      width: 30px;
+    }
+  </style>
 </head>
 <body>
-  <wfm-root>Загрузка....</wfm-root>
+<wfm-root>
+  <div id="app-preload">
+    <div class="loader-animator"></div>
+  </div>
+</wfm-root>
 </body>
 </html>

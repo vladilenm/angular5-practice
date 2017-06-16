@@ -5,6 +5,18 @@
       "email": "wfm@mail.ru",
       "password": "12345678",
       "name": "Администратор"
+    },
+    {
+      "email": "mininvlad@gmail.com",
+      "password": "12345678",
+      "name": "Минин Владилен",
+      "id": 2
+    },
+    {
+      "email": "minin2vlad@gmail.com",
+      "password": "2222222222",
+      "name": "Минин Владилен",
+      "id": 3
     }
   ],
   "bill": {

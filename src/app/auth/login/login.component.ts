@@ -15,7 +15,7 @@ import { routingFadeTrigger } from '../../shared/animations/routing.animations';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  authError: string;
+  message: {text: string, type: string} = {text: '', type: 'danger'};
 
   constructor(private authService: AuthService,
               private router: Router,
@@ -26,7 +26,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe((params: Params) => {
       if (params['accessDenied']) {
-        this.showError('Чтобы начать работу войдите в систему.');
+        this.showError('Чтобы начать работу войдите в систему.', 'warning');
+      } else if (params['nowCanLogin']) {
+        this.showError('Теперь вы можете войти в систему со своими данными', 'success');
       }
     });
 
@@ -36,9 +38,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  private showError(message: string) {
-    this.authError = message;
-    window.setTimeout(() => {this.authError = ''}, 5000);
+  private showError(text: string, type: string = 'danger') {
+    this.message = {text, type};
+    window.setTimeout(() => {this.message.text = ''}, 5000);
   }
 
   onSubmit() {
@@ -48,7 +50,7 @@ export class LoginComponent implements OnInit {
       .subscribe((user: User) => {
         if (user) {
           if (user.password === userData.password) {
-            this.authError = '';
+            this.message.text = '';
             this.authService.login();
             window.localStorage.setItem('user', JSON.stringify(user));
             this.router.navigate(['/system', 'bill']);

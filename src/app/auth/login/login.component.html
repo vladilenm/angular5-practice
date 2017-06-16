@@ -1,5 +1,5 @@
 <p class="text-xs-center">Войдите для работы</p>
-<div @routeState class="alert alert-danger" *ngIf="authError">{{authError}}</div>
+<div @routeState class="alert alert-{{message.type}}" *ngIf="message.text">{{message.text}}</div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form-group" [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
     <label for="email">Email</label>
