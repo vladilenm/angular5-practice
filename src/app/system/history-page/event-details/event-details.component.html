@@ -14,9 +14,9 @@
         <div
           class="card card-success"
           [ngClass]="{
-          'card-success': event.type === 'income',
-          'card-danger': event.type === 'outcome'
-        }"
+            'card-success': event.type === 'income',
+            'card-danger': event.type === 'outcome'
+          }"
         >
           <div class="card-header">
             <div class="header-block">
@@ -30,6 +30,7 @@
             <ul>
               <li>Сумма: <strong>{{event.amount | number:'1.2'}} P</strong></li>
               <li>Категория: <strong>{{category.name}}</strong></li>
+              <li *ngIf="event.description">Описание: <strong>{{event.description}}</strong></li>
             </ul>
           </div>
           <div class="card-footer">{{event.date}}</div>

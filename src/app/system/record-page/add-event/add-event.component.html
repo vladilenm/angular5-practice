@@ -49,6 +49,16 @@
         >
         <span class="form-help-text" *ngIf="amount.invalid && amount.touched">Сумма должна быть больше 0</span>
       </div>
+      <div class="form-group">
+        <label class="control-label" for="description">Введите описание</label>
+        <input
+          type="text"
+          id="description"
+          class="form-control"
+          [ngModel]="''"
+          name="description"
+        >
+      </div>
       <button
         type="submit"
         class="btn btn-primary"

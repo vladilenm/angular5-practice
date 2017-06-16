@@ -5,27 +5,38 @@
       "email": "wfm@mail.ru",
       "password": "12345678",
       "name": "Администратор"
+    },
+    {
+      "email": "mininvlad@gmail.com",
+      "password": "12345678",
+      "name": "Минин Владилен",
+      "id": 2
     }
   ],
   "bill": {
-    "value": 94000,
+    "value": 91280,
     "currency": "RUB"
   },
   "categories": [
     {
-      "id": 1,
       "name": "Дом",
-      "capacity": 15000
+      "capacity": 15000,
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Еда",
-      "capacity": 10000
+      "capacity": 10000,
+      "id": 2
     },
     {
       "id": 3,
       "name": "Машина",
       "capacity": 7000
+    },
+    {
+      "name": "Новая",
+      "capacity": 1000,
+      "id": 4
     }
   ],
   "events": [
@@ -34,35 +45,56 @@
       "type": "income",
       "amount": 1250,
       "category": 2,
-      "date": "12.12.2017 19:49:02"
+      "date": "12.12.2017 19:49:02",
+      "description": "Купил шкаф"
     },
     {
       "id": 2,
       "type": "outcome",
       "amount": 1300,
       "category": 1,
-      "date": "12.12.2017 19:49:02"
+      "date": "12.12.2017 19:49:02",
+      "description": "Купил посудомоечную машину"
     },
     {
       "type": "income",
       "amount": 1480,
       "category": 2,
       "date": "15.06.2017 14:00:48",
-      "id": 3
+      "id": 3,
+      "description": "Поход в окей"
     },
     {
       "type": "outcome",
       "amount": 2470,
       "category": 2,
       "date": "15.06.2017 14:00:58",
-      "id": 4
+      "id": 4,
+      "description": "Закупка на неделю"
     },
     {
       "type": "outcome",
       "amount": 4000,
       "category": 3,
       "date": "15.06.2017 14:01:58",
-      "id": 5
+      "id": 5,
+      "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "outcome",
+      "amount": 600,
+      "category": 4,
+      "date": "16.06.2017 14:06:11",
+      "description": "qwert",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 4,
+      "date": "16.06.2017 14:06:34",
+      "description": "22",
+      "id": 7
     }
   ]
 }

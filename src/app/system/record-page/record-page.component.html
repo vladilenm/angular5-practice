@@ -3,9 +3,11 @@
     Страница записей <span class="sparkline bar"></span>
   </h3>
 </div>
-
-<section class="section">
-  <div class="row" *ngIf="isLoaded">
+<section class="section text-center" *ngIf="!isLoaded">
+  <wfm-loader></wfm-loader>
+</section>
+<section class="section" *ngIf="isLoaded">
+  <div class="row">
     <div class="col-md-6">
       <wfm-add-event [categories]="categories"></wfm-add-event>
     </div>
@@ -13,9 +15,10 @@
       <wfm-add-category (onAddCategory)="newCategoryAdded($event)"></wfm-add-category>
     </div>
   </div>
-  <div class="row" *ngIf="!isLoaded">
-    <div class="col-xs-12 text-center">
-      <wfm-loader></wfm-loader>
+  <div class="row">
+    <div class="col-md-6">
+      <wfm-edit-category [categories]="categories" (onEditCategory)="categoryWasEdited($event)"></wfm-edit-category>
     </div>
   </div>
 </section>
+

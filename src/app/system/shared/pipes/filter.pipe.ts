@@ -8,7 +8,6 @@ export class FilterPipe implements PipeTransform {
     if (items.length === 0 || !value) {
       return items;
     }
-
     return items.filter((i) => {
       const t = Object.assign({}, i);
       if (!isNaN(t[field])) {
@@ -16,6 +15,9 @@ export class FilterPipe implements PipeTransform {
       }
       if (field === 'type') {
         t[field] = t[field] === 'income' ? 'Доход' : 'Расход';
+      }
+      if (field === 'category') {
+        t[field] = t['categoryName'];
       }
       return t[field].toLowerCase().indexOf(value.toLowerCase()) !== -1;
     });

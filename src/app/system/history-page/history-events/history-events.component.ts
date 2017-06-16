@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Category } from '../../shared/models/categiry.model';
 import { Event } from '../../shared/models/event.model';
 
@@ -7,15 +7,17 @@ import { Event } from '../../shared/models/event.model';
   templateUrl: './history-events.component.html',
   styleUrls: ['./history-events.component.scss']
 })
-export class HistoryEventsComponent {
+export class HistoryEventsComponent implements OnInit {
   @Input() events: Event[] = [];
   @Input() categories: Category[] = [];
   searchField = 'amount';
   searchValue = '';
   searchPlaceholder = 'Сумма';
 
-  getCategoryNameFromEvent(event: Event): string {
-    return this.categories.find(c => c.id === event.category).name;
+  ngOnInit() {
+    this.events.forEach((e) => {
+      e.categoryName = this.categories.find(c => c.id === e.category).name;
+    });
   }
 
   getTypeClass(event: Event) {

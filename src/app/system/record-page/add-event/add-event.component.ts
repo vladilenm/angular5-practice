@@ -28,8 +28,8 @@ export class AddEventComponent {
   }
 
   onSubmit(form: NgForm) {
-    const {category, type, amount} = form.value;
-    const event = new Event(type, amount, +category, moment().format('DD.MM.YYYY HH:mm:ss'));
+    const {category, type, amount, description} = form.value;
+    const event = new Event(type, amount, +category, moment().format('DD.MM.YYYY HH:mm:ss'), description);
     this.billService.getBillValue()
       .subscribe((bill: Bill) => {
         let value = 0;
@@ -47,7 +47,7 @@ export class AddEventComponent {
         this.billService.updateBill({value, currency: bill.currency})
           .mergeMap(() => this.eventsService.addEvent(event))
           .subscribe(() => {
-            form.setValue({category: 1, type: 'outcome', amount: 1});
+            form.setValue({category: 1, type: 'outcome', amount: 1, description: ''});
           });
       });
   }

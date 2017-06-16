@@ -40,7 +40,7 @@
               <th scope="row">{{i + 1}}</th>
               <td>{{event.amount | number:'1.2'}}</td>
               <td>{{event.date | wfmMoment:'DD.MM.YYYY HH:mm:ss':'DD.MM.YYYY'}}</td>
-              <td>{{getCategoryNameFromEvent(event)}}</td>
+              <td>{{event.categoryName}}</td>
               <td>
                   <span [ngClass]="getTypeClass(event)">
                     <span *ngIf="event.type === 'income'">Доход</span>
