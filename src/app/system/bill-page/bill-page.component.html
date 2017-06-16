@@ -14,7 +14,7 @@
     <wfm-bill-card [bill]="bill" [currency]="currency"></wfm-bill-card>
     <wfm-currency-card [currency]="currency"></wfm-currency-card>
   </div>
-  <div class="row" *ngIf="!isLoaded">
-    Loading ....
+  <div class="row text-center" *ngIf="!isLoaded">
+    <wfm-loader></wfm-loader>
   </div>
 </section>

@@ -10,6 +10,7 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
 import { AuthGuard } from './shared/services/auth.guard';
 import { AuthService } from './shared/services/auth.service';
 import { UserService } from './shared/services/users.service';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserService } from './shared/services/users.service';
     BrowserModule,
     HttpModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [AuthGuard, AuthService, UserService],
   bootstrap: [AppComponent]

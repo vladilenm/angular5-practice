@@ -8,10 +8,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'wfm-registration',
   templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.scss']
+  styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent implements OnInit {
-
   form: FormGroup;
 
   constructor(private userService: UserService, private router: Router) {
