@@ -7,7 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class HistoryChartComponent {
   @Input() data;
-  colorScheme = {
-    domain: ['#52BCD3', '#2DB2DF', '#85D2ED']
-  };
 }

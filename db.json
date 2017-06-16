@@ -79,22 +79,6 @@
       "date": "15.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
-    },
-    {
-      "type": "outcome",
-      "amount": 600,
-      "category": 4,
-      "date": "16.06.2017 14:06:11",
-      "description": "qwert",
-      "id": 6
-    },
-    {
-      "type": "outcome",
-      "amount": 1000,
-      "category": 4,
-      "date": "16.06.2017 14:06:34",
-      "description": "22",
-      "id": 7
     }
   ]
 }

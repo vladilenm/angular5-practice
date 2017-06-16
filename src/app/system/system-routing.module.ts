@@ -9,9 +9,8 @@ import { RecordPageComponent } from './record-page/record-page.component';
 import { EventDetailsComponent } from './history-page/event-details/event-details.component';
 import { AuthGuard } from '../shared/services/auth.guard';
 
-//, canActivate: [AuthGuard]
 const routes: Routes = [
-  {path: '', component: SystemComponent, children: [
+  {path: '', component: SystemComponent, canActivate: [AuthGuard], children: [
     {path: 'bill', component: BillPageComponent},
     {path: 'history', component: HistoryPageComponent},
     {path: 'planning', component: PlanningPageComponent},

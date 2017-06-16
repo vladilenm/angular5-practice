@@ -1,11 +1,25 @@
 <div class="title-block">
-  <h3 class="title">
+  <h3 class="title pull-left">
     Страница истории <span class="sparkline bar"></span>
   </h3>
+  <div class="pull-right">
+    <button class="btn-sm btn btn-primary-outline" (click)="openFilter()">
+      <i class="fa fa-filter"></i>
+    </button>
+  </div>
 </div>
 
 <div *ngIf="!isLoaded" class="text-center"><wfm-loader></wfm-loader></div>
 <div *ngIf="isLoaded">
   <wfm-history-chart [data]="chartData"></wfm-history-chart>
-  <wfm-history-events [categories]="categories" [events]="events"></wfm-history-events>
+  <wfm-history-events [categories]="categories" [events]="filteredEvents"></wfm-history-events>
+  <div *ngIf="isFilterVisible">
+    <wfm-filter-modal
+      (onCancel)="onFilterClose()"
+      (onSuccess)="onFilterApply($event)"
+      [categories]="categories"
+    ></wfm-filter-modal>
+  </div>
 </div>
+
+

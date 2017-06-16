@@ -25,6 +25,7 @@ import { HistoryEventsComponent } from './history-page/history-events/history-ev
 import { EventDetailsComponent } from './history-page/event-details/event-details.component';
 import { FilterPipe } from './shared/pipes/filter.pipe';
 import { EditCategoryComponent } from './record-page/edit-category/edit-category.component';
+import { FilterModalComponent } from './history-page/filter-modal/filter-modal.component';
 
 @NgModule({
   imports: [
@@ -51,7 +52,8 @@ import { EditCategoryComponent } from './record-page/edit-category/edit-category
     HistoryEventsComponent,
     EventDetailsComponent,
     FilterPipe,
-    EditCategoryComponent
+    EditCategoryComponent,
+    FilterModalComponent
   ],
   providers: [BillService, CategoriesService, EventsService]
 })
