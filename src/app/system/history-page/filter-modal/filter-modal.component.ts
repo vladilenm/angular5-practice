@@ -24,7 +24,7 @@ export class FilterModalComponent {
   timePeriods = [
     {type: 'd', label: 'День'},
     {type: 'w', label: 'Неделя'},
-    {type: 'm', label: 'Месяц'}
+    {type: 'M', label: 'Месяц'}
   ];
 
   handleChangeType({checked, value}: any) {

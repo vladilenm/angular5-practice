@@ -5,13 +5,11 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from '../../shared/services/auth.service';
 import { User } from '../../shared/models/user.model';
 import { UserService } from '../../shared/services/users.service';
-import { routingFadeTrigger } from '../../shared/animations/routing.animations';
 
 @Component({
   selector: 'wfm-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  animations: [routingFadeTrigger]
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
