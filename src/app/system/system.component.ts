@@ -1,11 +1,8 @@
-import { Component, HostBinding } from '@angular/core';
-import { routingFadeTrigger } from '../shared/animations/routing.animations';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'wfm-system',
-  templateUrl: './system.component.html',
-  animations: [routingFadeTrigger]
+  templateUrl: './system.component.html'
 })
 export class SystemComponent {
-  @HostBinding('@routeState') animatedRoute = true;
 }
