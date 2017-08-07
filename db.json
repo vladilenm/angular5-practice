@@ -12,21 +12,7 @@
     "currency": "RUB"
   },
   "categories": [
-    {
-      "name": "Дом",
-      "capacity": 15000,
-      "id": 1
-    },
-    {
-      "name": "Еда",
-      "capacity": 10000,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "name": "Машина",
-      "capacity": 7000
-    }
+
   ],
   "events": [
     {

@@ -7,23 +7,49 @@ import { Category } from '../models/categiry.model';
 
 @Injectable()
 export class CategoriesService extends BaseApi {
+
+  private categories: Category[] = [
+    {
+      'name': 'Дом',
+      'capacity': 15000,
+      'id': 1
+    },
+    {
+      'name': 'Еда',
+      'capacity': 10000,
+      'id': 2
+    },
+    {
+      'id': 3,
+      'name': 'Машина',
+      'capacity': 7000
+    }
+  ];
+
+  private idCount = 3;
+
   constructor(public http: Http) {
     super(http);
   }
 
   getCategories(): Observable<Category[]> {
-    return this.get('categories');
+    return Observable.of(this.categories.slice());
   }
 
   addCategory(category: Category): Observable<Category> {
-    return this.post('categories', category);
+    category.id = ++this.idCount;
+    this.categories.push(category);
+    return Observable.of(category);
   }
 
   getCategoryById(id: number): Observable<Category> {
-    return this.get(`categories/${id}`);
+    return Observable.of(this.categories.find(c => c.id === id));
   }
 
   editCategory(category: Category): Observable<Category> {
-    return this.put(`categories/${category.id}`, category);
+    category.id = +category.id;
+    let idx = this.categories.findIndex(c => c.id === category.id);
+    this.categories[idx] = category;
+    return Observable.of(category);
   }
 }

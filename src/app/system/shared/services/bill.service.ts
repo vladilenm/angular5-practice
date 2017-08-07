@@ -7,16 +7,23 @@ import { BaseApi } from '../../../shared/core/base-api.service';
 
 @Injectable()
 export class BillService extends BaseApi {
+  private bill: Bill = {
+    value: 100000,
+    currency: 'RUB'
+  };
+
   constructor(public http: Http) {
     super(http);
   }
 
   getBillValue(): Observable<Bill> {
-    return this.get('bill');
+    return Observable.of(this.bill);
   }
 
   updateBill(bill: Bill): Observable<Bill> {
-    return this.put('bill', bill);
+    bill.value = +bill.value;
+    this.bill = bill;
+    return Observable.of(this.bill);
   }
 
   getCurrency(base: string = 'RUB'): Observable<any> {
